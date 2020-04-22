@@ -7,7 +7,7 @@ The script and client class require the following additional pip3 components: <u
   <li>uuid</li>
   <li>os.path</li>
   <li>sys</li> 
-  <li>socket</li>
+  <li>socket</li></ul>
 
 Todo: create a requirements.txt for pip3 installation
 
