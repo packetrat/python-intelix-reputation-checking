@@ -2,7 +2,7 @@ This is a simple script and supporting class file in Python 3 to run a batch que
 
 The script and client class require the following additional pip3 components: <ul>
   <li>requests</li>
-  <li>json></li>
+  <li>json</li>
   <li>base64</li>
   <li>uuid</li>
   <li>os.path</li>
