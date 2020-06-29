@@ -9,7 +9,7 @@ The script and client class require the following additional pip3 components: <u
   <li>sys</li> 
   <li>socket</li></ul>
  
- A secondary version requires ipwhois for collecting ASN data.
+ A secondary version, repandasncheck.py, requires ipwhois for collecting ASN data for the purposes of hosting analysis.
 
 Todo: create a requirements.txt for pip3 installation
 
