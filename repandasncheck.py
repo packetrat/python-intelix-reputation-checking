@@ -1,7 +1,7 @@
-import intelixclient, sys, socket, ipwhois
+import intelixclient, sys, socket, ipwhois, whois
 #Intelix setup: enter your data here
-clientId = "xxxxxxxxxxx"
-secret = "xxxxxxxxxxxxxx"
+clientId = "7h0g8929jmqb3vjrlifmkpq67t"
+secret = "1ivn19h62fsil3vdie9i6h2un11pnfjl9uh22olq563at0isvu0o"
 i = intelixclient.client(clientId,secret)
 i2 = intelixclient.client(clientId,secret)
 inputfile = input("Enter filename containing URIs to be checked: ")  
@@ -22,9 +22,10 @@ while True:
         netobj = ipwhois.Net(addr1)
         netasn = ipwhois.asn.IPASN(netobj)
         netresult = netasn.lookup(netasn)
-        sys.stdout.write(u"{},{},{},{},{},{}\n".format(url, i.securityCategory, i.productivityCategory, addr1, i2.category, netresult))
+        addrdomain = whois.query(url)
+        sys.stdout.write(u"{},{},{},{},{},{},{},{},{}\n".format(url, i.securityCategory, i.productivityCategory, addr1, i2.category, netresult['asn'], netresult['asn_description'], netresult['asn_cidr'], addrdomain.registrar))
         sys.stdout.flush()
-        opf.write(u"{},{},{},{},{},{}\n".format(url, i.securityCategory, i.productivityCategory, addr1, i2.category, netresult))
+        opf.write(u"{},{},{},{},{},{},{},{},{}}\n".format(url, i.securityCategory, i.productivityCategory, addr1, i2.category, netresult['asn'], netresult['asn_description'], netresult['asn_cidr'], addrdomain.registrar))
         line = f.readline
     except:
         print( url, "is bad")
