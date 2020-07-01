@@ -1,7 +1,7 @@
 import intelixclient, sys, socket, ipwhois, whois
 #Intelix setup: enter your data here
-clientId = "7h0g8929jmqb3vjrlifmkpq67t"
-secret = "1ivn19h62fsil3vdie9i6h2un11pnfjl9uh22olq563at0isvu0o"
+clientId = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 i = intelixclient.client(clientId,secret)
 i2 = intelixclient.client(clientId,secret)
 inputfile = input("Enter filename containing URIs to be checked: ")  
