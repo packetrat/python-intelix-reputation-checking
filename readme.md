@@ -10,6 +10,9 @@ The script and client class require the following additional pip3 components: <u
   <li>socket</li></ul>
  
 Added: domaincheck.py, which provides additional data including domain registrar, ASN number, host, and country code.
+This version requires the additional pip3 components:
+<l1>whois</li>
+<li>ipwhois</li>
 
 Todo: create a requirements.txt for pip3 installation
 
