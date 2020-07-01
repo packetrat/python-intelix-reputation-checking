@@ -1,12 +1,14 @@
-import intelixclient, sys, socket, ipwhois, whois
+import intelixclient, sys, socket, ipwhois, whois, getopt
+inputfile = sys.argv[1]
+print ('Input file is ', inputfile,".  Output will be to ", inputfile, "_results.csv")
+#
 #Intelix setup: enter your data here
-clientId = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+clientId = "xxxxxxx"
+secret = "xxxxxxxxxx"
 i = intelixclient.client(clientId,secret)
 i2 = intelixclient.client(clientId,secret)
-inputfile = input("Enter filename containing URIs to be checked: ")  
 f = open( inputfile, 'r')
-o = inputfile + '_results.txt'
+o = inputfile + '_results.csv'
 opf = open( o, 'w')
 count = 0
 while True:
