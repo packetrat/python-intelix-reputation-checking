@@ -1,5 +1,7 @@
 This project began as a simple script and supporting class file in Python 3 to run a batch query against Sophos' Intelix threat intelligence system for both URI and IP address classifications. That simple script is still here, as is a more complex script that traverses Intelix and whois data to grab a more complete picture of the hosting of sites that have been identified as potential indicators of compromise (IOCs). 
 
+The script intelixiocchecker.py is the original script. It consumes a text file with host names of potential IOCs, and performs an IP and URI reputation check on them. That's all.
+
 The intelixclient.py file is a modified version of the pip-installable intelix library, which is currently being updated to include IP address reputation support. 
 
 The script and client class require the following additional pip3 components: <ul>
